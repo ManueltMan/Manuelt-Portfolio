@@ -25,6 +25,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&family=Saira+Stencil+One&display=swap"
     rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
 <body id="top" class="dark_theme">
@@ -60,23 +61,20 @@
       </button> -->
 
       <nav class="navbar">
-        <div class="navlink flex-center gap-10 wrap">
-          <div class="div">
-            <a href="#home">Home.</a>
-          </div>
-          <div class="div">
-            <a href="#about">About.</a>
-          </div>
-          <div class="div">
-            <a href="#skills">Skills.</a>
-          </div>
-          <!-- <div class="div">
-            <a href="#portfolio">Portfolio.</a></a>
-          </div> -->
-          <div class="div">
-            <a href="#contact">Contact.</a>
-          </div>
-       </div>
+        <input type="checkbox" id="check">
+        <label for="check">
+            <i class="fas fa-bars" id="btn"></i>
+            <i class="fas fa-times" id="cancel"></i>
+        </label>
+      <div class="sidebar">
+        <header>More</header>
+        <ul>
+            <li><a href="#home">Home.</a></li>
+            <li><a href="#about">About.</a></li>
+            <li><a href="#skills">Skills.</a></li>
+            <li><a href="#portfolio">Portfolio.</a></li>
+            <li><a href="#contact">Contact.</a></li>
+        </ul>
       </nav>
 
     </div>
@@ -231,12 +229,6 @@
             worked with
             creative teams, which involves daily stand-ups and communications, source control, and project management.
           </p>
-
-          <!-- <div class="btn-group">
-            <button class="btn btn-secondary">Hire me</button>
-
-            <button class="btn btn-primary">Download cv</button>
-          </div> -->
 
         </div>
 
