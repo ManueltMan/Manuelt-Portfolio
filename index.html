@@ -1,585 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Manuelt_Man portfolio Website</title>
-
-  <!-- 
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
-
-  <!-- 
-    - custom css link
-  -->
+  <title>Emmanuel Bada | Portfolio 2025</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papE+8+aX6JZg+Yb8/7xF+5n0lD1P5+z6mRk+6A4O7pJYHC6oHJ3ZcN+2d6H0Q0E27CwBr6xtK5dOV7JZ8qJig==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js" defer></script>
   <link rel="stylesheet" href="style.css">
-
-  <!-- 
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&family=Saira+Stencil+One&display=swap"
-    rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
+<body>
+ <header class="header">
+  <div class="container flex-between">
+    <a href="#" class="logo">Bada<span>Em</span></a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
 
-<body id="top" class="dark_theme">
-
-  <!-- 
-    - #HEADER
-  -->
-
-  <header class="header" data-header>
-    <div class="container">
-
-      <h1 class="h1 logo">
-        <a href="#">Portfolio</a>
-      </h1>
-
-      <!-- <div class="navbar-actions">
-
-        <select name="language" id="lang">
-          <option value="en">En</option>
-          <option value="ar">Ar</option>
-        </select>
-
-        <button class="theme-btn" aria-label="Change Theme" title="Change Theme" data-theme-btn>
-          <span class="icon"></span>
-        </button>
-
-      </div> -->
-
-      <!-- <button class="nav-toggle-btn" aria-label="Toggle Menu" title="Toggle Menu" data-nav-toggle-btn>
-        <span class="one"></span>
-        <span class="two"></span>
-        <span class="three"></span>
-      </button> -->
-
-      <nav class="navbar">
-        <input type="checkbox" id="check">
-        <label for="check">
-            <i class="fas fa-bars" id="btn"></i>
-            <i class="fas fa-times" id="cancel"></i>
-        </label>
-      <div class="sidebar">
-        <header>More</header>
-        <ul>
-            <li><a href="#home">Home.</a></li>
-            <li><a href="#about">About.</a></li>
-            <li><a href="#skills">Skills.</a></li>
-            <li><a href="#portfolio">Portfolio.</a></li>
-            <li><a href="#contact">Contact.</a></li>
-        </ul>
-      </nav>
-
-    </div>
-  </header>
+    <nav class="nav-bar">
+      <ul class="navbar-list">
+        <li><a href="#hero" class="navbar-link">Home</a></li>
+        <li><a href="#about" class="navbar-link">About</a></li>
+        <li><a href="#skills" class="navbar-link">Skills</a></li>
+        <li><a href="#projects" class="navbar-link">Projects</a></li>
+        <li><a href="#contact" class="navbar-link">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
 
 
 
-
+  
   <main>
-    <article class="container">
+    <section class="hero" id="hero">
+      <img src="Bada shot.JPG" alt="Emmanuel Bada" class="hero-banner">
+      <div class="hero-content">
+        <h1 class="hero-title">Hi, I'm Emmanuel Bada</h1>
+        <p class="section-text">A Frontend developer creating interactive and responsive web experiences.</p>
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+      </div>
+    </section>
 
-      <!-- 
-        - #HERO
-      -->
-
-      <section class="hero" id="home">
-<!-- 
-        <div>
-          <img style="margin-top: 80px; margin-left: 80px;" src="piccc.jpg"width="200px" alt="">
-        </div> -->
-
-        <div class="hero-content">
-          
-
-          <h2 class="h2 hero-title">Let's Design & Build User Friendly Website For You</h2>
-
-          <a href="#contact" class="btn btn-primary">Get in touch</a>
-
+   
+    <section class="about section fade-in" id="about">
+      <div class="about-banner">
+        <img src="Bada shot.JPG" alt="About Me">
+      </div>
+      <div class="about-content">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-text">I specialize in building high-quality web applications with modern tools and frameworks. I am passionate about design, performance, and creating memorable user experiences.</p>
+        <div class="btn-group">
+          <a href="#contact" class="btn btn-primary">Hire Me</a>
+          <a href="assets/bada.resume.docx" target="_blank" class="btn btn-secondary">Download CV</a>
         </div>
-
-        <ul class="hero-social-list">
-
-          <li>
-            <a href="#" class="hero-social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-
-              <div class="tooltip">Facebook</div>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="hero-social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-
-              <div class="tooltip">Twitter</div>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="hero-social-link">
-              <ion-icon name="logo-linkedin"></ion-icon>
-
-              <div class="tooltip">Linkedin</div>
-            </a>
-          </li>
-
-        </ul>
-
-        <a href="#stats" class="scroll-down">Scroll</a>
-
-      </section>
-
-
-
-
-
-      <!-- 
-        - #STATS
-      -->
-
-      <section class="stats" id="stats">
-        <ul class="stats-list">
-
-          <li>
-            <a href="#" class="stats-card">
-
-              <div class="card-icon">
-                <img src="badge.png" alt="Badge icon">
-              </div>
-
-              <h2 class="h2 card-title">
-                1/2 <strong>Years of Experience</strong>
-              </h2>
-
-              <ion-icon name="chevron-forward-outline"></ion-icon>
-
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="stats-card">
-
-              <div class="card-icon">
-                <img src="check.png" alt="Checkmark icon">
-              </div>
-
-              <h2 class="h2 card-title">
-                4+ <strong>Completed Projects</strong>
-              </h2>
-
-              <ion-icon name="chevron-forward-outline"></ion-icon>
-
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="stats-card">
-
-              <div class="card-icon">
-                <img src="pep.png" alt="Peoples rating icon">
-              </div>
-
-              <h2 class="h2 card-title">
-                5+ <strong>Happy Clients</strong>
-              </h2>
-
-              <ion-icon name="chevron-forward-outline"></ion-icon>
-
-            </a>
-          </li>
-
-        </ul>
-      </section>
-
-
-
-
-
-      <!-- 
-        - #ABOUT
-      -->
-
-      <section class="about" id="about">
-
-        <figure class="about-banner">
-          <img src="piccc.jpg" alt="A man in a alice blue shirt with a thinking expression"
-            class="w-100">
-        </figure>
-
-        <div class="about-content section-content">
-
-          <p class="section-subtitle">About me</p>
-
-          <h2 class="h3 section-title">Need a Functional Website? I can Help You!</h2>
-
-          <p class="section-text">
-            Hi! I’m Bada Emmanuel, and I’m a Frontend developer who has passion for building clean websites with intuitive
-            functionalities. I enjoy the process of turning ideas into reality using creative solutions. I’m always
-            curious about
-            learning new skills, tools, and concepts. In addition to working on various solo full stack projects, I have
-            worked with
-            creative teams, which involves daily stand-ups and communications, source control, and project management.
-          </p>
-
-        </div>
-
-      </section>
-
-
-
-
-
-      <!-- 
-        - #SKILLS
-      -->
-
-      <section class="skills" id="skills">
-
-        <div class="skills-content section-content">
-
-          <p class="section-subtitle">My skills</p>
-
-          <h2 class="h3 section-title"> My Programming Skills</h2>
-
-          <p class="section-text">
-            I develop simple, intuitive and responsive user interface that helps users get things done with less effort
-            and time
-            with those technologies.
-          </p>
-
-          <!-- <div class="skills-toggle" data-toggle-box>
-            <button class="toggle-btn active" data-toggle-btn>Skills</button>
-
-            <button class="toggle-btn" data-toggle-btn>Tools</button>
-          </div> -->
-
-        </div>
-
-        <div class="skills-box" data-skills-box>
-
-          <ul class="skills-list">
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">HTML5</div>
-
-                <div class="card-icon">
-                  <img src="png-transparent-logo-html-html5-thumbnail.png"width="30px" alt="HTML5 logo">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">CSS3</div>
-
-                <div class="card-icon">
-                  <img src="png-transparent-logo-css-css3-thumbnail.png"width="30px" alt="CSS3 logo">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">JavaScript</div>
-
-                <div class="card-icon">
-                  <img src="png-transparent-javascript-logo-html-javascript-logo-angle-text-rectangle-thumbnail.png"width="30px" alt="JavaScript logo">
-                </div>
-              </div>
-            </li>
-
-          </ul>
-
-          <ul class="tools-list">
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">VS Code</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/vs-code.png" alt="VS Code logo">
-                </div>
-              </div>
-            </li>
-
-         
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Photoshop</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/photoshop.png" alt="Photoshop logo">
-                </div>
-              </div>
-            </li>
-
-          </ul>
-
-        </div>
-
-      </section>
-
-
-
-
-
-      <!-- 
-        - #PROJECTS
-      -->
-
-      <section class="project" id="portfolio">
-
-        <ul class="project-list">
-
-          <li>
-            <div class="project-content section-content">
-
-              <p class="section-subtitle">My Works</p>
-
-              <h2 class="h3 section-title">See My Works Which Will Amaze You!</h2>
-
-              <p class="section-text">
-                We develop the best quality website that serves for the long-term. Well-documented, clean, easy and
-                elegant interface
-                helps any non-technical clients.
-              </p>
-
-            </div>
-          </li>
-
-          <li>
-            <a href="#" class="project-card">
-
-              <figure class="card-banner">
-                <img src="IMG_20230925_210954.png" class="w-100" alt="A macintosh on a yellow background.">
-              </figure>
-
-              <div class="card-content">
-                <h3 class="h4 card-title">Baker's Kitchen Snacks</h3>
-
-                <time class="publish-date" datetime="2022-04">September 2023</time>
-              </div>
-
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="project-card">
-
-              <figure class="card-banner">
-                <img src="Screenshot (70).png" class="w-100" alt="On a Blue background, a Wacom and a mouse.">
-              </figure>
-
-              <div class="card-content">
-                <h3 class="h4 card-title">Serenity Suites</h3>
-
-                <time class="publish-date" datetime="2022-04">October 2023</time>
-              </div>
-
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="project-card">
-
-              <figure class="card-banner">
-                <img src="Screenshot (118).png" class="w-100"
-                  alt="A Cassette tape on a mellow apricot background.">
-              </figure>
-
-              <div class="card-content">
-                <h3 class="h4 card-title">Serenity Available Rooms</h3>
-
-                <time class="publish-date" datetime="2022-04">October 2023</time>
-              </div>
-
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="project-card">
-
-              <figure class="card-banner">
-                <img src="Screenshot (11).png" class="w-100"
-                  alt="Blue digital watch on a dark liver background.">
-              </figure>
-
-              <div class="card-content">
-                <h3 class="h4 card-title">Kay's Kitchen</h3>
-
-                <time class="publish-date" datetime="2022-04">November 2023</time>
-              </div>
-
-            </a>
-          </li>
-
-        </ul>
-
-      </section>
-
-
-
-
-
-      <!-- 
-        - #CONTACT
-      -->
-
-      <section class="contact" id="contact">
-
-        <div class="contact-content section-content">
-
-          <p class="section-subtitle">Contact</p>
-
-          <h2 class="h3 section-title">Have You Any Project? Please Drop a Message</h2>
-
-          <p class="section-text">
-            Get in touch and let me know how i can help.
-          </p>
-
-          <ul class="contact-list">
-
-            <li class="contact-list-item">
-
-              <div class="contact-item-icon">
-                <ion-icon name="location-outline"></ion-icon>
-              </div>
-
-              <div class="wrapper">
-                <h3 class="h4 contact-item-title">Address:</h3>
-
-                <address class="contact-info">
-                  13, Oba-Mammud Drive, New Shao Garage, Sobi rd, ilorin,Kw
-                </address>
-              </div>
-
-            </li>
-
-            <li class="contact-list-item">
-
-              <div class="contact-item-icon">
-                <ion-icon name="call-outline"></ion-icon>
-              </div>
-
-              <div class="wrapper">
-                <h3 class="h4 contact-item-title">Phone:</h3>
-
-                <a href="tel:0901-906-7034" class="contact-info">0901-906-7034</a>
-
-              </div>
-
-            </li>
-
-            <li class="contact-list-item">
-
-              <div class="contact-item-icon">
-                <ion-icon name="mail-outline"></ion-icon>
-              </div>
-
-              <div class="wrapper">
-                <h3 class="h4 contact-item-title">Email:</h3>
-
-                <a href="mailto:badaemma460@.com" class="contact-info">badaemma460@.com</a>
-
-              </div>
-
-            </li>
-
-            <li>
-              <ul class="contac-social-list">
-
-                <li>
-                  <a href="https://www.facebook.com/bada.emmanuel.520" class="contact-social-link">
-                    <div class="tooltip">Facebook</div>
-
-                    <ion-icon name="logo-facebook"></ion-icon>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="" class="contact-social-link">
-                    <div class="tooltip">Twitter</div>
-
-                    <ion-icon name="logo-twitter"></ion-icon>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="https://www.instagram.com/nuel__3?igsh=MWJhdXN0dW55eWxpYg%3D%3D&utm_source=qr" class="contact-social-link">
-                    <div class="tooltip">Instagram</div>
-
-                    <ion-icon name="logo-instagram"></ion-icon>
-                  </a>
-                </li>
-
-              </ul>
-            </li>
-
-          </ul>
-
-        </div>
-
-       <div>
-        <img style="margin-top: 80px; margin-left: -20px; border-radius: 10px;" src="piccc.jpg"width="500px" alt="">
-       </div>
-
-      </section>
-
-    </article>
+      </div>
+    </section>
+
+   
+    <section class="skills section fade-in" id="skills">
+      <h2 class="section-title">Skills</h2>
+      <p class="section-text">
+    I have experience working with modern web technologies and tools that help me build clean, responsive, and efficient websites.  
+    These are some of the core skills I use to bring ideas to life on the web.
+  </p>
+      <div class="skills-box">
+          <div class="skill-card">
+              <img src="png-transparent-javascript-logo-html-javascript-logo-angle-text-rectangle-thumbnail.png" alt="HTML5">
+              <span>HTML5</span>
+          </div>
+          <div class="skill-card">
+              <img src="png-transparent-logo-css-css3-thumbnail.png" alt="CSS3">
+              <span>CSS3</span>
+          </div>
+          <div class="skill-card">
+              <img src="png-transparent-javascript-logo-html-javascript-logo-angle-text-rectangle-thumbnail.png" alt="JavaScript">
+              <span>JavaScript</span>
+          </div>
+          <div class="skill-card">
+              <img src="OIP.webp" alt="GitHub">
+              <span>GitHub</span>
+          </div>
+          <div class="skill-card">
+              <img src="vscode.png" alt="VS Code">
+              <span>VS Code</span>
+          </div>
+      </div>
+
+    </section>
+
+    
+    <section class="project section fade-in" id="projects">
+      <h2 class="section-title">Projects</h2>
+      <ul class="project-list">
+        <li class="project-card">
+          <a href="#"><img src="Screenshot (70).png" alt="Project 1"></a>
+          <div class="card-content">
+            <h3 class="card-title">Hotel Management Website</h3>
+            <time class="publish-date">2023</time>
+          </div>
+        </li>
+        <li class="project-card">
+          <a href="#"><img src="Screenshot (80).png" alt="Project 2"></a>
+          <div class="card-content">
+            <h3 class="card-title">Show Booking Website</h3>
+            <time class="publish-date">2024</time>
+          </div>
+        </li>
+        <li class="project-card">
+          <a href="#"><img src="Screenshot (82).png" alt="Project 2"></a>
+          <div class="card-content">
+            <h3 class="card-title">Portfolio Website</h3>
+            <time class="publish-date">2023</time>
+          </div>
+        </li>
+        <li class="project-card">
+          <a href="#"><img src="Screenshot (85).png" alt="Project 2"></a>
+          <div class="card-content">
+            <h3 class="card-title">Resturant Website</h3>
+            <time class="publish-date">2023</time>
+          </div>
+        </li>
+        <li class="project-card">
+          <a href="#"><img src="Screenshot (87).png" alt="Project 2"></a>
+          <div class="card-content">
+            <h3 class="card-title">Crypto Dashboard</h3>
+            <time class="publish-date">2023</time>
+          </div>
+        </li>
+        <li class="project-card">
+          <a href="#"><img src="Screenshot (88).png" alt="Project 2"></a>
+          <div class="card-content">
+            <h3 class="card-title">Ecommerce Dashboard</h3>
+            <time class="publish-date">2023</time>
+          </div>
+        </li>
+      </ul>
+    
+      <a href="#"><p>See more...</p></a>
+    </section>
+
+    <section class="contact section fade-in" id="contact">
+      <h2 class="section-title">Contact Me</h2>
+      <div class="contact-socials">
+          <a href="https://wa.me/2348012345678" target="_blank">
+            <img src="whatsapp-logo-background-29.png" alt="WhatsApp">
+          </a>
+          <a href="https://www.instagram.com/" target="_blank">
+            <img src="instagram-icon-logo-free-png.png" alt="Instagram">
+          </a>
+          <a href="https://www.linkedin.com/" target="_blank">
+            <img src="llinked.png" alt="LinkedIn">
+          </a>
+      </div>
+      
+      <form class="contact-form" action="mailto:badaemmanuel460@gmail.com" method="post" enctype="text/plain">
+        <div class="input-wrapper"><input type="text" name="name" placeholder="Your Name" required class="input-field"></div>
+        <div class="input-wrapper"><input type="email" name="email" placeholder="Your Email" required class="input-field"></div>
+        <div class="input-wrapper"><textarea name="message" placeholder="Your Message" required class="input-field"></textarea></div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </section>
   </main>
 
-
-
-
-
-  <!-- 
-    - #FOOTER
-  -->
-
   <footer class="footer">
-    <div class="container">
-
-      <p class="h1 logo">
-        <a href="#">
-         Portfolio
-        </a>
-      </p>
-
-      <p class="copyright">
-        &copy; 2023 <a href="#">ManueltMan</a>. All rights reserved
-      </p>
-
+    <div class="container flex-between">
+      <div class="logo">Bada<span>Em</span></div>
+      <p class="copyright">&copy; 2025 Emmanuel Bada. All rights reserved.</p>
     </div>
   </footer>
 
+  <script>
+  const sections = document.querySelectorAll('.fade-in');
 
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
 
-
-
-
-
-  <!-- 
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
-
-  <!-- 
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+  sections.forEach(section => observer.observe(section));
+</script>
 </body>
-
 </html>

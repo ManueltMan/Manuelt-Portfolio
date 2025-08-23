@@ -1,22 +1,20 @@
 'use strict';
 
-/**
- * element toggle function
- */
+/* =========================
+   ELEMENT TOGGLE FUNCTION
+========================= */
+const elemToggleFunc = (elem) => {
+  elem.classList.toggle("active");
+};
 
-const elemToggleFunc = function (elem) { elem.classList.toggle("active"); }
-
-
-
-/**
- * header sticky & go to top
- */
-
+/* =========================
+   HEADER & GO TOP BUTTON
+========================= */
 const header = document.querySelector("[data-header]");
 const goTopBtn = document.querySelector("[data-go-top]");
+const navLinks = document.querySelectorAll(".navbar-link");
 
-window.addEventListener("scroll", function () {
-
+window.addEventListener("scroll", () => {
   if (window.scrollY >= 10) {
     header.classList.add("active");
     goTopBtn.classList.add("active");
@@ -25,75 +23,55 @@ window.addEventListener("scroll", function () {
     goTopBtn.classList.remove("active");
   }
 
+  // Highlight active navbar link
+  const sections = document.querySelectorAll("section");
+  sections.forEach(section => {
+    const top = window.scrollY;
+    const offset = section.offsetTop - 80;
+    const height = section.offsetHeight;
+    const id = section.getAttribute("id");
+    if (top >= offset && top < offset + height) {
+      navLinks.forEach(link => link.classList.remove("active"));
+      document.querySelector(`.navbar-link[href="#${id}"]`).classList.add("active");
+    }
+  });
 });
 
-
-
-/**
- * navbar toggle
- */
-
-// const navToggleBtn = document.querySelector("[data-nav-toggle-btn]");
-// const navbar = document.querySelector("[data-navbar]");
-
-// navToggleBtn.addEventListener("click", function () {
-
-//   elemToggleFunc(navToggleBtn);
-// //   elemToggleFunc(navbar);
-//   elemToggleFunc(document.body);
-
-// });
-
-
-
-/**
- * skills toggle
- */
-
-const toggleBtnBox = document.querySelector("[data-toggle-box]");
-const toggleBtns = document.querySelectorAll("[data-toggle-btn]");
-const skillsBox = document.querySelector("[data-skills-box]");
-
-for (let i = 0; i < toggleBtns.length; i++) {
-  toggleBtns[i].addEventListener("click", function () {
-
-    elemToggleFunc(toggleBtnBox);
-    for (let i = 0; i < toggleBtns.length; i++) { elemToggleFunc(toggleBtns[i]); }
-    elemToggleFunc(skillsBox);
-
+/* =========================
+   SMOOTH SCROLL
+========================= */
+navLinks.forEach(link => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute("href"));
+    target.scrollIntoView({ behavior: "smooth" });
+    document.getElementById("check").checked = false; // close mobile nav
   });
-}
+});
 
+goTopBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
 
-
-/**
- * dark & light theme toggle
- */
-
+/* =========================
+   THEME TOGGLE
+========================= */
 const themeToggleBtn = document.querySelector("[data-theme-btn]");
 
-themeToggleBtn.addEventListener("click", function () {
-
+themeToggleBtn.addEventListener("click", () => {
   elemToggleFunc(themeToggleBtn);
-
   if (themeToggleBtn.classList.contains("active")) {
     document.body.classList.remove("dark_theme");
     document.body.classList.add("light_theme");
-
     localStorage.setItem("theme", "light_theme");
   } else {
     document.body.classList.add("dark_theme");
     document.body.classList.remove("light_theme");
-
     localStorage.setItem("theme", "dark_theme");
   }
-
 });
 
-/**
- * check & apply last time selected theme from localStorage
- */
-
+// Apply theme on page load
 if (localStorage.getItem("theme") === "light_theme") {
   themeToggleBtn.classList.add("active");
   document.body.classList.remove("dark_theme");
@@ -103,3 +81,18 @@ if (localStorage.getItem("theme") === "light_theme") {
   document.body.classList.remove("light_theme");
   document.body.classList.add("dark_theme");
 }
+
+/* =========================
+   SKILLS TOGGLE
+========================= */
+const toggleBtnBox = document.querySelector("[data-toggle-box]");
+const toggleBtns = document.querySelectorAll("[data-toggle-btn]");
+const skillsBox = document.querySelector("[data-skills-box]");
+
+toggleBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    elemToggleFunc(toggleBtnBox);
+    toggleBtns.forEach(b => elemToggleFunc(b));
+    elemToggleFunc(skillsBox);
+  });
+});
