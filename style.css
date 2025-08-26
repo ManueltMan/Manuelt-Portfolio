@@ -1,6 +1,4 @@
-/* =========================
-   GENERAL STYLES
-========================= */
+
 body {
   font-family: 'Inter', 'Montserrat', sans-serif;
   font-size: 16px;
@@ -11,9 +9,7 @@ body {
   scroll-behavior: smooth;
 }
 
-/* =========================
-   HEADER / NAVBAR
-========================= */
+
 .header {
   position: fixed;
   top: 0;
@@ -75,7 +71,7 @@ body {
   width: 100%;
 }
 
-/* NAV TOGGLE */
+
 .nav-toggle {
   display: none;
 }
@@ -106,7 +102,7 @@ body {
   
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 768px) {
   .navbar-list {
     flex-direction: column;
@@ -134,12 +130,12 @@ body {
     display: flex;
   }
 
-  /* Show sidebar when checkbox is checked */
+ 
   .nav-toggle:checked ~ .nav-bar .navbar-list {
     right: 0;
   }
 
-  /* Animate hamburger to X */
+
   .nav-toggle:checked + .nav-toggle-btn span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
   }
@@ -154,9 +150,7 @@ body {
 
 
 
-/* =========================
-   HERO
-========================= */
+
 .hero {
   display: flex;
   align-items: center;
@@ -189,9 +183,7 @@ body {
   color: #ccc;
 }
 
-/* =========================
-   BUTTONS
-========================= */
+
 .btn {
   padding: 0.8rem 2rem;
   border: none;
@@ -223,9 +215,7 @@ body {
   color: #fff;
 }
 
-/* =========================
-   SECTIONS
-========================= */
+
 .section {
   padding: 6rem 2rem;
 }
@@ -247,9 +237,7 @@ body {
   border-radius: 2px;
 }
 
-/* =========================
-   ABOUT
-========================= */
+
 .about {
   display: flex;
   flex-wrap: wrap;
@@ -275,9 +263,7 @@ body {
   justify-content: center;
 }
 
-/* =========================
-   SKILLS
-========================= */
+
 .skills-toggle {
   display: flex;
   justify-content: center;
@@ -331,9 +317,7 @@ body {
   font-size: 0.9rem;
 }
 
-/* =========================
-   PROJECTS
-========================= */
+
 .project-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -386,7 +370,7 @@ body {
   transition: transform 0.4s ease;
 }
 
-/* Hover Effect */
+
 .project-card:hover {
   transform: translateY(-8px) scale(1.03);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -410,9 +394,7 @@ body {
 }
 
 
-/* =========================
-   CONTACT
-========================= */
+
 .contact-section {
   text-align: center;
 }
@@ -482,18 +464,14 @@ body {
   color: #ff4c60;
 }
 
-/* =========================
-   FOOTER
-========================= */
+
 .footer {
   text-align: center;
   padding: 2rem;
   background: #111;
 }
 
-/* =========================
-   GO TOP BUTTON
-========================= */
+
 .go-top {
   position: fixed;
   right: 2rem;
@@ -511,9 +489,6 @@ body {
   display: block;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
 @media (max-width: 768px) {
   .about, .hero {
     flex-direction: column;
@@ -547,7 +522,7 @@ body {
   }
 }
 
-/* SKILL ICONS */
+
 .skill-card img {
   width: 60px;
   height: 60px;
@@ -555,7 +530,7 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* SOCIAL ICONS */
+
 .contact-socials a img {
   width: 40px;
   height: 40px;
@@ -567,7 +542,6 @@ body {
 }
 
 
-/* Fade-in effect */
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
@@ -577,4 +551,65 @@ body {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+
+@media (max-width: 768px) {
+  
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 5rem; 
+  }
+
+  .hero-banner {
+    margin-top: 1rem;
+    max-width: 85%;
+  }
+
+  .hero-content {
+    margin-top: 1.5rem;
+    max-width: 90%;
+  }
+
+ 
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-content {
+    margin-top: 1.5rem;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding-top: 4rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .section {
+    padding: 4rem 1rem;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .project-list {
+    grid-template-columns: 1fr; 
+    justify-items: center;    
+    padding: 0 1rem;           
+  }
+
+  .project-card {
+    max-width: 90%; 
+  }
 }
